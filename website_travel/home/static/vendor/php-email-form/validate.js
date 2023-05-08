@@ -66,7 +66,32 @@
       thisForm.querySelector('.loading').classList.remove('d-block');
       if (data.trim() == 'OK') {
         thisForm.querySelector('.sent-message').classList.add('d-block');
-        thisForm.reset(); 
+        // thisForm.reset(); 
+
+
+
+        fetch('send_email.php', {
+          method: 'POST',
+          body: formData,
+          headers: {'X-Requested-With': 'XMLHttpRequest'}
+        })
+        .then(response => {
+          if( response.ok ) {
+            return response.text();
+          } else {
+            throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
+          }
+        })
+        .then(data => {
+          // Xử lý phản hồi từ server-side sau khi gửi email thành công (nếu cần thiết)
+        })
+        .catch((error) => {
+          displayError(thisForm, error);
+        });
+        
+        
+  
+        
       } else {
         throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
       }

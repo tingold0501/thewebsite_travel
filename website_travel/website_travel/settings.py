@@ -126,3 +126,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Setting Send Email
+# settings.py
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.example.com'  # Địa chỉ SMTP của máy chủ email
+# EMAIL_PORT = 587  # Cổng của máy chủ email
+# EMAIL_USE_TLS = True  # Sử dụng TLS để mã hóa kết nối
+# EMAIL_HOST_USER = 'admin@example.com'  # Địa chỉ email của admin
+# EMAIL_HOST_PASSWORD = 'password'  # Mật khẩu email của admin
