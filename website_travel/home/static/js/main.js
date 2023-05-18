@@ -247,3 +247,32 @@
   });
 
 })()
+
+
+
+
+// JavaScript code
+// document.getElementById('email-form').addEventListener('submit', function(event) {
+//   event.preventDefault();
+
+//   let formData = new FormData(this);
+
+//   fetch('/send-email/', {
+//       method: 'post',
+//       body: formData
+//   })
+//   .then(response => response.json())
+//   .then(data => {
+//       if (data.status === 'success') {
+//           // Gửi email thành công, thực hiện các thao tác tiếp theo (hiển thị thông báo, reset form, v.v.)
+//           alert("Đã gữi yêu cầu")
+//       } else {
+//           // Xử lý lỗi khi gửi email
+//           alert("Không gữi được yêu cầu")
+//       }
+//   })
+//   .catch(error => {
+//       // Xử lý lỗi khi gửi email
+//       alert("Lỗi ngoại lệ")
+//   });
+// });
