@@ -19,10 +19,10 @@ def home(request):
             subject='New Booking Request',
             message=f'Name: {name}\nEmail: {email}\nPhone: {phone}\nDate: {date}\nTime: {time}\nNumber of People: {people}\nMessage: {message}',
             from_email=email,
-            recipient_list=['huynhtin0501@gmail.com'],
+            recipient_list=['phamtin050120@gmail.com'],
             fail_silently=False,
         )
-        return JsonResponse({'status': 'success'})
+        return render(request, 'home.html', {'success_message': 'Email sent successfully!'})
     return render(request, 'home.html')
 
 
