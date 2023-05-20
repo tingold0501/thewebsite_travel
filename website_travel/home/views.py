@@ -6,13 +6,13 @@ from django.http import JsonResponse
 # Create your views here.
 def home(request):
     if request.method == 'POST':
-        name = request.POST['name']
-        email = request.POST['email']
-        phone = request.POST['phone']
-        date = request.POST['date']
-        time = request.POST['time']
-        people = request.POST['people']
-        message = request.POST['message']
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        date = request.POST.get('date')
+        time = request.POST.get('time')
+        people = int(request.POST.get('people'))
+        message = request.POST.get('message')
         
         # Gửi email đến admin
         send_mail(
