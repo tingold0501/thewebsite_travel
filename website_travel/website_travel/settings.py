@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'dashboard',
     'login',
     'account',
+    'testsendmail',
     
     
 ]
@@ -125,6 +126,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'huynhtin0501@gmail.com'
 EMAIL_HOST_PASSWORD = 'huynhtinjava2020'
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'your-email'
+EMAIL_USE_TLS = True  # Nếu sử dụng TLS
+
 

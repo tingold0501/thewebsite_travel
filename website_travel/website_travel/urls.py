@@ -10,5 +10,6 @@ urlpatterns = [
     path('dashboard/', include('dashboard.urls')),
     path('login/', include('login.urls')),
     path('account/', include('account.urls')),
+    path('send-mail/', include('testsendmail.urls')),
 
 ]
