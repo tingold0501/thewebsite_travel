@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'booking',
     'gallery',
     'rigister',
+    'bookingdetail',
   
     
     

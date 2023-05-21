@@ -13,6 +13,7 @@ urlpatterns = [
     path('booking/', include('booking.urls')),
     path('gallery/', include('gallery.urls')),
     path('rigister/', include('rigister.urls')),
+    path('bookingdetail/', include('bookingdetail.urls')),
  
 
 ]
