@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'account',
     'booking',
     'gallery',
+    'rigister',
   
     
     
