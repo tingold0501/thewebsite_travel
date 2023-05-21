@@ -10,5 +10,8 @@ urlpatterns = [
     path('dashboard/', include('dashboard.urls')),
     path('login/', include('login.urls')),
     path('account/', include('account.urls')),
+    path('booking/', include('booking.urls')),
+    path('gallery/', include('gallery.urls')),
+ 
 
 ]
