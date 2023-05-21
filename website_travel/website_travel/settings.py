@@ -84,8 +84,12 @@ WSGI_APPLICATION = 'website_travel.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'traveldb',
+        'USER': 'admin',
+        'PASSWORD': 'phamhuynhtin',
+        'HOST':'database.croqqluog7ff.us-east-1.rds.amazonaws.com',
+        'POST': 3306
     }
 }
 
