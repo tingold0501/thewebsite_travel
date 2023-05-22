@@ -8,6 +8,7 @@ from formsdashboard.models import Slide
 # Create your views here.
 def home(request):
     slides = load_slide_data()
+    
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -31,7 +32,7 @@ def home(request):
 
 
 def load_slide_data():
-    slides = Slide.objects.all()
+    slides = Slide.objects.order_by('-id')[:3]
     return slides
 
 

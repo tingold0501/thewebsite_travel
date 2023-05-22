@@ -10,7 +10,7 @@ def create_slide(request):
         form = SlideForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('formsdashboard')  # Thay 'home' bằng tên URL pattern của trang chủ
+            return redirect('formsdashboard') 
 
     return render(request, 'indexFormsDashboard.html', {'form': form})
 

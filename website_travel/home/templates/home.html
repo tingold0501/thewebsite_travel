@@ -81,7 +81,7 @@
 
           <!-- Slide 1 -->
           {% for slide in slides %}
-          <div class="carousel-item active" style="background-image: url({%static 'img/slide/slide-1.png'%});">
+          <div class="carousel-item active" style="background-image: url('{{ slide.image.url }}');">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown">{{ slide.field1 }}</h2>
@@ -94,35 +94,6 @@
             </div>
           </div>
           {% endfor %}
-
-          <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url({%static 'img/slide/slide-2.jpg'%});">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Phú Quốc Tôi</h2>
-                <p class="animate__animated animate__fadeInUp">Phú Quốc là một hòn đảo đẹp và nổi tiếng ở Việt Nam. Nơi đây có những bãi biển trắng tuyệt đẹp, nước biển trong xanh và rất nhiều hoạt động giải trí và tham quan thú vị. Du khách có thể tận hưởng những trải nghiệm tuyệt vời tại các khu nghỉ dưỡng sang trọng, thưởng thức ẩm thực đặc trưng của địa phương, hay tham gia các hoạt động như lặn biển, lướt sóng, câu cá hoặc đơn giản chỉ thư giãn trên bãi biển. Phú Quốc cũng được biết đến như một điểm đến lý tưởng cho những ai muốn trốn thoát khỏi sự ồn ào của thành phố và tìm về với thiên nhiên.</p>
-                <div>
-                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Thực Đơn</a>
-                  <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Chọn Chuyến</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="carousel-item" style="background-image: url({%static 'img/slide/slide-3.jpg'%});">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Đặc Sản</h2>
-                <p class="animate__animated animate__fadeInUp">Phú Quốc nổi tiếng với các món ăn hải sản tươi sống, như chả cá hấp, ghẹ nướng mỡ hành, cua đồng nướng muối ớt, mang đến cho du khách những hương vị đặc trưng của vùng biển đảo này.</p>
-                <div>
-                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Thực Đơn</a>
-                  <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Chọn Bàn</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
 
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
