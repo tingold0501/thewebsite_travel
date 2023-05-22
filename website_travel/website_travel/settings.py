@@ -30,11 +30,11 @@ INSTALLED_APPS = [
     'home',
     'dashboard',
     'login',
-    'account',
     'booking',
     'gallery',
     'rigister',
     'bookingdetail',
+    'formsdashboard',
   
     
     
