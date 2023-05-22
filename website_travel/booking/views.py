@@ -1,5 +1,6 @@
 from django.shortcuts import render
+from .models import Restaurant
 
-# Create your views here.
 def booking(request):
-    return render(request,'indexBooking.html')
+    restaurant_list = Restaurant.objects.all()
+    return render(request, 'indexBooking.html', {'indexBooking': restaurant_list})
