@@ -3,8 +3,11 @@ from django.shortcuts import render
 from django.core.mail import send_mail
 from django.conf import settings
 from django.http import JsonResponse
+from formsdashboard.models import Slide
+
 # Create your views here.
 def home(request):
+    slides = load_slide_data()
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -23,7 +26,14 @@ def home(request):
             fail_silently=False,
         )
         return render(request, 'home.html', {'success_message': 'Email sent successfully!'})
-    return render(request, 'home.html')
+    return render(request, 'home.html',{'slides': slides})
+
+
+
+def load_slide_data():
+    slides = Slide.objects.all()
+    return slides
+
 
 
 

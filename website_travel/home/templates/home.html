@@ -48,8 +48,6 @@
 
       <div class="logo me-auto">
         <h1><a href="index.html">Phú Quốc Travel</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -82,11 +80,12 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
+          {% for slide in slides %}
           <div class="carousel-item active" style="background-image: url({%static 'img/slide/slide-1.png'%});">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown"><span>Nhà Hàng</span> Nổi Bật</h2>
-                <p class="animate__animated animate__fadeInUp">Nhà hàng ở Phú Quốc thường được thiết kế độc đáo và nằm ngay trên bãi biển, tạo cảm giác ấm cúng và lãng mạn cho khách hàng khi thưởng thức các món ăn đặc trưng của địa phương.</p>
+                <h2 class="animate__animated animate__fadeInDown">{{ slide.field1 }}</h2>
+                <p class="animate__animated animate__fadeInUp">{{ slide.field2 }}</p>
                 <div>
                   <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Thực Đơn</a>
                   <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Chọn Bàn</a>
@@ -94,6 +93,7 @@
               </div>
             </div>
           </div>
+          {% endfor %}
 
           <!-- Slide 2 -->
           <div class="carousel-item" style="background-image: url({%static 'img/slide/slide-2.jpg'%});">
