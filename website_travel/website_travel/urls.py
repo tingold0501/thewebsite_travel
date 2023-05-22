@@ -14,6 +14,7 @@ urlpatterns = [
     path('rigister/', include('rigister.urls')),
     path('bookingdetail/', include('bookingdetail.urls')),
     path('formsdashboard/', include('formsdashboard.urls')),
+    path('account/', include('account.urls')),
  
 
 ]

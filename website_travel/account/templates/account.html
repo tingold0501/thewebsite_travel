@@ -8,15 +8,15 @@
 	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
 	<meta name="author" content="AdminKit">
 	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
-    {%load static%}
+	{% load static %}
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
-	<link rel="canonical" href="https://demo-basic.adminkit.io/pages-blank.html" />
+	<link rel="canonical" href="https://demo-basic.adminkit.io/pages-profile.html" />
 
-	<title>Forms - Admin</title>
+	<title>Profile | AdminKit Demo</title>
 
-	<link href="{%static 'formsdashboard/css/app.css'%}" rel="stylesheet">
+	<link href="{%static 'account/css/app.css'%}" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -25,7 +25,7 @@
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" href="index.html">
-          <span class="align-middle">AdminKit</span>
+          <span class="align-middle">Travel Admin</span>
         </a>
 
 				<ul class="sidebar-nav">
@@ -39,27 +39,25 @@
             </a>
 					</li>
 
-					<li class="sidebar-item">
+					<li class="sidebar-item active">
 						<a class="sidebar-link" href="{%url 'account'%}" onclick = "window.location.href = account/templates/account.html">
               <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
             </a>
 					</li>
 
-
-					<li class="sidebar-item active">
-						<a class="sidebar-link" href="{%url 'formsdashboard'%}" onclick = "window.location.href = formsdashboard/templates/indexFormsDashboard.html">
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="{%url 'formsdashboard'%}" onclick = "window.location.href = formsdashboard/templates/indexFormsDashboard">
               <i class="align-middle" data-feather="book"></i> <span class="align-middle">Forms</span>
             </a>
 					</li>
 
-				
+					
 				</ul>
 
 				<div class="sidebar-cta">
 					<div class="sidebar-cta-content">
-						
 						<div class="d-grid">
-							<a href="{%url 'home'%}" onclick = "window.location.href = home/templates/home.html" class="btn btn-primary">Go To Home</a>
+							<a href="{% url 'home' %}" onclick = "window.location.href = home/templates/home.html" class="btn btn-primary">Go to home</a>
 						</div>
 					</div>
 				</div>
@@ -212,13 +210,13 @@
               </a>
 
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="" /> <span class="text-dark">HuynhTin</span>
+                <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
               </a>
 							<div class="dropdown-menu dropdown-menu-end">
 								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
 								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href=""><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
+								<a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
 								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="#">Log out</a>
@@ -231,35 +229,44 @@
 			<main class="content">
 				<div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3">Form Home</h1>
-
+					<div class="mb-3">
+						<h1 class="h3 d-inline align-middle">Profile</h1>
+					</div>
 					<div class="row">
-						<div class="col-12">
+						<div class="col-md-4 col-xl-3">
+							<div class="card mb-3">
+								<div class="card-header">
+									<h5 class="card-title mb-0">Profile Details</h5>
+								</div>
+								<div class="card-body text-center">
+									<img src="img/avatars/avatar-4.jpg" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
+									<h5 class="card-title mb-0">Christina Mason</h5>
+									<div class="text-muted mb-2">Lead Developer</div>
+
+									<div>
+										<a class="btn btn-primary btn-sm" href="#">Follow</a>
+										<a class="btn btn-primary btn-sm" href="#"><span data-feather="message-square"></span> Message</a>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+
+						<div class="col-md-8 col-xl-9">
 							<div class="card">
 								<div class="card-header">
-									<h5 class="card-title mb-0">Empty card</h5>
+
+									<h5 class="card-title mb-0">Activities</h5>
 								</div>
-								<div class="card-body">
+								<div class="card-body h-100">
+									<hr />
+									<div class="d-grid">
+										<a href="#" class="btn btn-primary">Load more</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-
-                    <h1 class="h3 mb-3">Form Booking</h1>
-
-					<div class="row">
-						<div class="col-12">
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Empty card</h5>
-								</div>
-								<div class="card-body">
-								</div>
-							</div>
-						</div>
-					</div>
-
-                   
 
 				</div>
 			</main>
@@ -268,7 +275,7 @@
 		</div>
 	</div>
 
-	<script src="{%static 'formsdashboard/js/app.js'%}"></script>
+	<script src="{%static 'account/js/app.js'%}"></script>
 
 </body>
 

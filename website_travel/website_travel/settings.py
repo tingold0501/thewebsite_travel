@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'rigister',
     'bookingdetail',
     'formsdashboard',
+    'account',
   
     
     
