@@ -63,8 +63,8 @@
       <div class="container position-relative">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-6 text-center">
-            <h2>The Pepper Tree Restaurant</h2>
-            <p>Nhà hàng The Pepper Tree nằm trong khuôn viên của resort La Veranda. Nơi đây mang đến không gian ấm cúng, với kiến trúc cổ điển Pháp và một không gian lãng mạn bên bờ biển. Nhà hàng chuyên phục vụ các món ăn phương Tây và đặc sản Việt Nam, đi kèm với thực đơn rượu vang phong phú.</p>
+            <h2>{{ name }}</h2>
+            <p>{{ description }}</p>
 
             <a class="cta-btn" href="{%url 'login'%}" onclick = "window.location.href = login/templates/login.html" >Booking</a>
 
@@ -82,24 +82,9 @@
             <div class="swiper-wrapper align-items-center">
 
               <div class="swiper-slide">
-                <img src="{%static 'gallery/img/gallery/gallery-8.jpg'%}" alt="">
+                <img src="{{ image.url }}" alt="{{ name }}">
               </div>
-              <div class="swiper-slide">
-                <img src="{%static 'gallery/img/gallery/gallery-9.jpg'%}" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="{%static 'gallery/img/gallery/gallery-10.jpg'%}" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="{%static 'gallery/img/gallery/gallery-11.jpg'%}" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="{%static 'gallery/img/gallery/gallery-12.jpg'%}" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="{%static 'gallery/img/gallery/gallery-13.jpg'%}" alt="">
-              </div>
-
+            
             </div>
             <div class="swiper-pagination"></div>
           </div>
@@ -113,29 +98,20 @@
           <div class="col-lg-8">
             <div class="portfolio-description">
               <h2>Chi tiết</h2>
-              <p>
-                The Pepper Tree có không gian ấm cúng và lãng mạn, với kiến trúc cổ điển Pháp kết hợp với phong cách Việt Nam. Nhà hàng nằm trong một khu vườn xanh tươi, tạo ra không gian yên tĩnh và thư giãn cho khách hàng.
-              </p>
-              <p>
-                Nhà hàng chuyên phục vụ các món ăn phương Tây và đặc sản Việt Nam. Thực đơn đa dạng, bao gồm các món ăn hấp dẫn như hải sản tươi sống, thịt nướng, salad, pasta, steak, và các món tráng miệng ngon lành. Đặc biệt, nhà hàng cũng có một thực đơn rượu vang phong phú để khách hàng lựa chọn.
-              </p>
+              <p>{{ detail1 }}</p>
+              <p>{{ detail2 }}</p>
+             
+              <p>{{ detail4 }}</p>
+              <p>{{ detail5 }}</p>
+
 
               <div class="testimonial-item">
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Nhân viên phục vụ tận tâm, chuyên nghiệp và thân thiện. Bạn sẽ được hưởng một dịch vụ tốt và tận hưởng một trải nghiệm ẩm thực đáng nhớ tại The Pepper Tree.                  <i class="bi bi-quote quote-icon-right"></i>
+                  <p>{{ detail3 }}</p>
                 </p>
-                {% comment %} <div>
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                </div> {% endcomment %}
+               
               </div>
-
-              <p>
-                Nhà hàng có vị trí tuyệt đẹp, nằm ngay bên bờ biển Long Beach của Phú Quốc. Bạn có thể ngắm nhìn khung cảnh biển tuyệt đẹp trong lúc thưởng thức bữa ăn.
-              <p>
-                Giá cả tại The Pepper Tree tương đối cao hơn so với các nhà hàng thông thường, nhưng đồng hành cùng với chất lượng cao và trải nghiệm ẩm thực đặc biệt.              </p>
 
             </div>
           </div>
@@ -175,79 +151,7 @@
               <h4>160.000 VNĐ</h4>
             </div>
           </div><!-- End Pricing Item -->
-
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <h3>Khô Cá Đuối</h3>
-              <h4>160.000 VNĐ</h4>
-            </div>
-          </div><!-- End Pricing Item -->
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <h3>Khô Cá Đuối</h3>
-              <h4>160.000 VNĐ</h4>
-            </div>
-          </div><!-- End Pricing Item -->
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <h3>Khô Cá Đuối</h3>
-              <h4>160.000 VNĐ</h4>
-            </div>
-          </div><!-- End Pricing Item -->
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <h3>Khô Cá Đuối</h3>
-              <h4>160.000 VNĐ</h4>
-            </div>
-          </div><!-- End Pricing Item -->
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <h3>Khô Cá Đuối</h3>
-              <h4>160.000 VNĐ</h4>
-            </div>
-          </div><!-- End Pricing Item -->
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <h3>Khô Cá Đuối</h3>
-              <h4>160.000 VNĐ</h4>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <h3>Khô Cá Đuối</h3>
-              <h4>160.000 VNĐ</h4>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <h3>Khô Cá Đuối</h3>
-              <h4>160.000 VNĐ</h4>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <h3>Khô Cá Đuối</h3>
-              <h4>160.000 VNĐ</h4>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <h3>Khô Cá Đuối</h3>
-              <h4>160.000 VNĐ</h4>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <h3>Khô Cá Đuối</h3>
-              <h4>160.000 VNĐ</h4>
-            </div>
-          </div><!-- End Pricing Item -->
-
+          
         </div>
     </section><!-- End Pricing Section -->
 

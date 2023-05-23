@@ -88,7 +88,7 @@
               <img src="{{ restaurant.image.url }}" class="img-fluid" alt="{{ restaurant.name }}">
 				      <div class="gallery-links d-flex align-items-center justify-content-center">
 				      <a href="{{ restaurant.image.url }}" title="{{ restaurant.name }}" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-				      <a href="{% url 'gallery' %}" onclick="window.location.href='gallery/templates/gallery.html'" class="details-link">{{ restaurant.name }}</a>
+				      <a href="{% url 'gallery' restaurant.id %}" class="details-link">{{ restaurant.name }}</a>
 				    </div>
             </div>
           </div><!-- End Gallery Item -->

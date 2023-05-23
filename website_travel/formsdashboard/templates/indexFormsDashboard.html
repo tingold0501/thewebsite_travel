@@ -250,6 +250,15 @@
 						{{ restaurant_form.as_p }}
 						<button type="submit_restaurant" name = "restaurant_form_submit">Add new Restaurant</button>
 					</form>
+
+
+					<h1 class="h3 mb-3">Form Booking Detail</h1>
+					<h6 class="h3 mb-3">Restaurant Detail</h6>
+					<form method="POST" enctype="multipart/form-data">
+						{% csrf_token %}
+						{{ restaurantdetails_form.as_p }}
+						<button type="submit_restaurantdetail" name = "restaurantdetail_form_submit">Add new Restaurant Detail</button>
+					</form>
 					  
  
 
