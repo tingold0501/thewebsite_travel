@@ -19,9 +19,9 @@ def user_login(request):
         except User.DoesNotExist:
             # Xử lý khi không tìm thấy User hoặc thông tin đăng nhập không khớp
             print("Not Login")
-            return render(request, 'login.html', {'error': 'Invalid email or password'})
+            return render(request, 'loginus.html', {'error': 'Invalid email or password'})
     else:
-        return render(request, 'login.html')
+        return render(request, 'loginus.html')
 
 
 
