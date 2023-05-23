@@ -27,7 +27,7 @@ class RestaurantForm(forms.ModelForm):
         
 
 class RestaurantDetail(models.Model):
-    restaurant = models.OneToOneField('formsdashboard.Restaurant', on_delete=models.CASCADE, default= 1)
+    restaurant = models.OneToOneField('formsdashboard.Restaurant', on_delete=models.CASCADE)
     description = models.CharField(max_length=400)
     detail1 = models.TextField(default='') # Thêm giá trị mặc định là ''
     detail2 = models.TextField(default='')

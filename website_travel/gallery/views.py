@@ -17,11 +17,17 @@ def gallery(request, restaurant_id):
     detail4 = restaurant_detail.detail4
     detail5 = restaurant_detail.detail5
 
-    return render(request, 'gallery.html', {'name': name, 'description': description, 'image': image,'detail1': detail1,
+    return render(request, 'gallery.html', {
+        'name': name,
+        'description': description,
+        'image': image,
+        'detail1': detail1,
         'detail2': detail2,
         'detail3': detail3,
         'detail4': detail4,
-        'detail5': detail5})
+        'detail5': detail5
+    })
+
 
 
 
