@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+
 
 def bookingdetail(request):
-    return render(request, 'indexBookingDetail.html')
+    return render(request, 'indexBookingDetail.html' )

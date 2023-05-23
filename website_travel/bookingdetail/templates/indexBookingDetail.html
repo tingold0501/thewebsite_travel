@@ -37,19 +37,20 @@
 						<div class="form-header">
 							<h1>Make your reservation</h1>
 						</div>
-						<form>
+						<form method="POST" enctype="multipart/form-data">
+							{% csrf_token %}
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
 										<span class="form-label">Ngày Vào</span>
-										<input class="form-control" type="date" required>
+										<input class="form-control" type="date" name ="check_in_date" required>
 									</div>
 									<span class="in-out hidden-xs hidden-sm">&#8652;</span>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
 										<span class="form-label">Ngày Đi</span>
-										<input class="form-control" type="date" required>
+										<input class="form-control" type="date" name ="check_out_date" required>
 									</div>
 								</div>
 							</div>
@@ -57,7 +58,7 @@
 								<div class="col-md-3">
 									<div class="form-group">
 										<span class="form-label">Số lượng phòng</span>
-										<select class="form-control">
+										<select class="form-control" name = "room_quantity">
 											<option>1</option>
 											<option>2</option>
 											<option>3</option>
@@ -72,7 +73,7 @@
 								<div class="col-md-3">
 									<div class="form-group">
 										<span class="form-label">Người Lớn</span>
-										<select class="form-control">
+										<select class="form-control" name = "adults">
 											<option>1</option>
 											<option>2</option>
 											<option>3</option>
@@ -96,7 +97,7 @@
 								<div class="col-md-3">
 									<div class="form-group">
 										<span class="form-label">Trẻ Nhỏ</span>
-										<select class="form-control">
+										<select class="form-control" name ="children">
 											<option>0</option>
 											<option>1</option>
 											<option>2</option>
