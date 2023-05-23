@@ -81,7 +81,7 @@
 
           <!-- Slide 1 -->
           {% for slide in slides %}
-          <div class="carousel-item active" style="background-image: url('/home/img/slide/{{slide.image}}');">
+          <div class="carousel-item active" style="background-image: url('{{ slide.image.url }}');">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown">{{ slide.field1 }}</h2>

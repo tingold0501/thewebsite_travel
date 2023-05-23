@@ -228,46 +228,30 @@
 				</div>
 			</nav>
 
+
+
 			<main class="content">
 				<div class="container-fluid p-0">
 
 					<h1 class="h3 mb-3">Form Home</h1>
+					<h6 class="h3 mb-3">Slide</h6>
 
-					<div class="row">
-						<div class="col-12">
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Edit Component</h5>
-									<h6 class="card-title mb-0">Slide 1</h6>
-								</div>
-								<div class="card-body">
-									<form method="POST">
-										{% csrf_token %}
-										{{ form.as_p }}
-										<button type="submit">Submit</button>
-									  </form>
-									  
-								</div>
-							</div>
-						</div>
-					</div>
-					
+					<form method="POST" enctype="multipart/form-data">
+						{% csrf_token %}
+						{{ slide_form.as_p }}
+						<button type="submit_slide" name ="slide_form_submit">Add New Slide</button>
+					</form>
 
-                    <h1 class="h3 mb-3">Form Booking</h1>
 
-					<div class="row">
-						<div class="col-12">
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Empty card</h5>
-								</div>
-								<div class="card-body">
-								</div>
-							</div>
-						</div>
-					</div>
-
-                   
+					<h1 class="h3 mb-3">Form Booking</h1>
+					<h6 class="h3 mb-3">Restaurant</h6>
+					<form method="POST" enctype="multipart/form-data">
+						{% csrf_token %}
+						{{ restaurant_form.as_p }}
+						<button type="submit_restaurant" name = "restaurant_form_submit">Add new Restaurant</button>
+					</form>
+					  
+ 
 
 				</div>
 			</main>

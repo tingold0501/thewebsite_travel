@@ -1,6 +1,11 @@
 from django.shortcuts import render
-from .models import Restaurant
+from formsdashboard.models import Restaurant
+# 
+
 
 def booking(request):
     restaurant_list = Restaurant.objects.all()
-    return render(request, 'indexBooking.html', {'indexBooking': restaurant_list})
+    print(restaurant_list)
+    return render(request, 'indexBooking.html', {'restaurant_list': restaurant_list})
+
+
