@@ -342,11 +342,12 @@
 									<tbody>
 										{% for booking in user_bookings %}
 										<tr>
-											<td>{{ booking.check_in_date }}</td>
-											<td>{{ booking.check_out_date }}</td>
-											<td>{{ booking.number_of_rooms }}</td>
-											<td>{{ booking.number_of_adults }}</td>
-											<td>{{ booking.number_of_children }}</td>
+										  <td>{{ user_email }}</td>
+										  <td>{{ booking.check_in_date }}</td>
+										  <td>{{ booking.check_out_date }}</td>
+										  <td>{{ booking.number_of_rooms }}</td>
+										  <td>{{ booking.number_of_adults }}</td>
+										  <td>{{ booking.number_of_children }}</td>
 										</tr>
 										{% endfor %}
 									</tbody>
