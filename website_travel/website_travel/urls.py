@@ -9,7 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('dashboard/', include('dashboard.urls')),
-    path('login/', include('login.urls')),
+    path('accounts/login/', include('login.urls')),
     path('booking/', include('booking.urls')),
     path('gallery/', include('gallery.urls')),
     path('rigister/', include('rigister.urls')),
